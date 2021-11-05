@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Qahiri&family=Red+Hat+Display&family=Roboto&display=swap');
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  line-height: 1.5;
+  background: url('../images/pattern-background-mobile.svg') center/cover
+    no-repeat;
+}
+
+/* VARIABLES */
+:root {
+  --clr-primary-pale: hsl(225, 100%, 94%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+  --clr-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-very-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-very-dark-blue: hsl(223, 47%, 23%);
+  --spacing: 0.25rem;
+  --radius: 10px;
+  --transition: all 1s linear;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.2rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  font-size: 1rem;
+}
+@media screen and (min-width: 375) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.section {
+  width: 90vw;
+  max-width: 28rem;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  background-color: #fff;
+}
+@media screen and (min-width: 375px) {
+  .section {
+    width: 95vw;
+  }
+}
+h3 {
+  margin-top: 1rem;
+}
+
+.section-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.img-container {
+  border-radius: var(--radius);
+}
+.music-plan-container {
+  background: var(--clr-very-pale-blue);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: var(--radius);
+  width: 80%;
+  margin: 1rem;
+}
+p {
+  text-align: center;
+  line-height: 1.6;
+  color: var(--clr-very-dark-blue);
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 1rem 3rem;
+}
+.icon-container {
+  width: 48px;
+  height: 48px;
+}
+.icon-container h4 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.button {
+  display: block;
+  width: 80%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.7s linear;
+}
+.primary-button {
+  color: #fff;
+  background: var(--clr-bright-blue);
+}
+.primary-button:hover {
+  background: var(--clr-primary-pale);
+  color: var(--clr-very-desaturated-blue);
+}
+.secondary-button {
+  margin: 1rem;
+  background-color: transparent;
+  color: var(--clr-very-desaturated-blue);
+}
+.music-plan-container .plan-name {
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  font-weight: bolder;
+}
+a {
+  font-weight: 800;
+}
+.detail {
+  line-height: 2;
+  color: var(--clr-very-desaturated-blue);
+}
+.price {
+  color: var(--clr-very-desaturated-blue);
+}
