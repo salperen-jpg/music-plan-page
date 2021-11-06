@@ -9,8 +9,13 @@
 body {
   font-family: 'Red Hat Display', sans-serif;
   line-height: 1.5;
-  background: url('../images/pattern-background-mobile.svg') center/cover
-    no-repeat;
+  background-color: var(--clr-primary-pale);
+}
+@media screen and (min-width: 576px) {
+  body {
+    background: url('../images/pattern-background-desktop.svg') center/cover
+      no-repeat;
+  }
 }
 
 /* VARIABLES */
@@ -51,7 +56,7 @@ h4 {
 p {
   font-size: 1rem;
 }
-@media screen and (min-width: 375) {
+@media screen and (min-width: 375px) {
   h1 {
     font-size: 4rem;
   }
@@ -82,7 +87,8 @@ p {
 }
 .section {
   width: 90vw;
-  max-width: 28rem;
+  max-width: 30rem;
+  width: 100%;
   margin: 0 auto;
   border-radius: var(--radius);
   background-color: #fff;
@@ -102,8 +108,12 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
 .img-container {
-  border-radius: var(--radius);
+  width: 100%;
 }
 .music-plan-container {
   background: var(--clr-very-pale-blue);
@@ -156,14 +166,24 @@ p {
   margin: 1rem;
   background-color: transparent;
   color: var(--clr-very-desaturated-blue);
+  transition: all 2s linear;
+}
+.secondary-button:hover {
+  color: #000;
 }
 .music-plan-container .plan-name {
   text-transform: capitalize;
   letter-spacing: 0.1rem;
   font-weight: bolder;
 }
-a {
+
+.change-link {
   font-weight: 800;
+  transition: all 2s linear;
+}
+.change-link:hover {
+  color: var(--clr-very-desaturated-blue);
+  text-decoration: none;
 }
 .detail {
   line-height: 2;
